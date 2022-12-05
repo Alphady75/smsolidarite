@@ -1,0 +1,325 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Mon compte
+{% endblock %}
+
+{% block pagetitle %}
+	<div class="app-page-title">
+		<div class="page-title-wrapper">
+			<div class="page-title-heading">
+				<div class="page-title-icon">
+					<i class="metismenu-icon pe-7s-user"></i>
+				</div>
+				<div>
+					Compte
+					{{ user.compte }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="account-info__btn-wrapper">
+		<a href="#general" class="account-info__btn account-info__btn-active button button--effect">Compte</a>
+		<a href="#billing" class="account-info__btn button button--effect">Billing</a>
+		<a href="#security" class="account-info__btn button button--effect">Security</a>
+	</div>
+	<div class="account-content_wrapper">
+		<div class="account-content" id="general">
+			<div class="avatar-wrapper">
+				<div class="avatar-content">
+					<div class="avatar">
+						<img src="{{ user.avatar ? vich_uploader_asset(user) : asset('img/avatar.png') | imagine_filter('very_large_avatar') }}" alt="Avatar de {{ user.nom ~ ' ' ~ user.prenom }}"/>
+					</div>
+					<div class="avatar-content__guideline">
+						<h6>{{ user.nom ~ ' ' ~ user.prenom }}</h6>
+						<p>{{ user.email}}</p>
+					</div>
+				</div>
+				<form action="#" method="post">
+					<input type="file" name="avatar_upload" id="avatarUpload"/>
+					<label for="avatarUpload">
+						Upload new avatar
+					</label>
+				</form>
+			</div>
+
+			<form action="#" name="save__from" method="post" class="save__form">
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveFirstName">Nom(s):</label>
+							{{ user.nom }}
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveLastName">Prénom(s):</label>
+							{{ user.prenom }}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveFirstName">Genre:</label>
+							{{ user.genre }}
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="savePhone">Téléphone:</label>
+							{{ user.telephone }}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveEmail">Email:</label>
+							{{ user.email }}
+						</div>
+					</div>
+					
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveEmail">Localisation:</label>
+
+							{{ user.pays }}
+							
+							{{ user.ville }}
+							
+							{{ user.adresse }}
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="input input--secondary">
+							<label for="saveEmail">A propos:</label> <br>
+							<p class="text-muted py-2">{{ user.apropos }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveEmail">Compte:</label>
+							{{ user.compte }}
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveEmail">Statut du compte:</label>
+							<span class="badge bg-{{ user.isVerified ? 'success' : 'danger' }}">{{ user.isVerified ? 'Activé' : 'Non activé' }}</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<label for="saveEmail">Mot de passe:</label>
+							<span>****</span>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="input input--secondary">
+							<a href="{{ path('edit_password') }}" class="button button--effect button-secondary">Mettre à jour</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<a href="{{ path('user_edit_compte') }}" class="button button--effect">Mettre à jour le profile</a>
+				</div>
+			</form>
+			<div class="account-content-single">
+				<div class="intro">
+					<h5>Notifications</h5>
+				</div>
+				<div class="account-content-single__inner">
+					<div class="content">
+						<h6>Announcements</h6>
+						<p>Occasional announcements of new features</p>
+					</div>
+					<div class="content-right">
+						<div class="switch-wrapper">
+							<input type="checkbox" id="announcement" checked="checked"/><label for="announcement"></label>
+						</div>
+					</div>
+				</div>
+				<div class="account-content-single__inner">
+					<div class="content">
+						<h6>Feedback requests</h6>
+						<p>Occasional requests for feedback</p>
+					</div>
+					<div class="content-right">
+						<div class="switch-wrapper">
+							<input type="checkbox" id="feedback" checked="checked"/><label for="feedback"></label>
+						</div>
+					</div>
+				</div>
+				<div class="account-content-single__inner">
+					<div class="content">
+						<h6>Billing and account</h6>
+						<p>Transactional emails and account notifications</p>
+					</div>
+					<div class="content-right">
+						<p>Legally Obligated</p>
+					</div>
+				</div>
+			</div>
+			<div class="delete-account">
+				<div class="delete-content">
+					<h6>Delete your account</h6>
+					<p class="secondary">Before deleting your account, please note that if you delete your account, Dash cannot recover it.</p>
+				</div>
+				<a href="#" class="button button--effect"><i class="fa fa-user"></i> Supprimer mon compte</a>
+			</div>
+		</div>
+		<div class="account-content" id="billing">
+			<div class="account-content-single mt-0">
+				<div class="intro">
+					<h5>Payment Methods</h5>
+					<a href="#">Add Method</a>
+				</div>
+				<div class="account-content-single__inner">
+					<div class="content content-alt">
+						<img src="assets/images/visa.png" alt="Visa"/>
+						<div>
+							<h6>Visa ending in 1234</h6>
+							<p>Expires 1/2025</p>
+						</div>
+					</div>
+					<div class="content-right">
+						<p>Default</p>
+					</div>
+				</div>
+				<div class="account-content-single__inner">
+					<div class="content content-alt">
+						<img src="assets/images/mastercard.png" alt="Mastercard"/>
+						<div>
+							<h6>Mastercard ending in 1234</h6>
+							<p>Expires 1/2025</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="investment-table">
+				<div class="intro">
+					<h5>Invoices</h5>
+				</div>
+				<div class="table-wrapper">
+					<table>
+						<tr>
+							<th>INVOICE ID</th>
+							<th>AMOUNT</th>
+							<th>DATE</th>
+							<th>STATUS</th>
+						</tr>
+						<tr>
+							<td>
+								Invoice #123
+							</td>
+							<td>$500.00</td>
+							<td>18.03.2022</td>
+							<td>
+								<span class="process"></span>Processing</td>
+						</tr>
+						<tr>
+							<td>
+								Invoice #123
+							</td>
+							<td>$500.00</td>
+							<td>18.03.2022</td>
+							<td>
+								<span class="paid"></span>Paid</td>
+						</tr>
+						<tr>
+							<td>
+								Invoice #123
+							</td>
+							<td>$500.00</td>
+							<td>18.03.2022</td>
+							<td>
+								<span class="paid"></span>Paid</td>
+						</tr>
+						<tr>
+							<td>
+								Invoice #123
+							</td>
+							<td>$500.00</td>
+							<td>18.03.2022</td>
+							<td>
+								<span class="paid"></span>Paid</td>
+						</tr>
+						<tr>
+							<td>
+								Invoice #123
+							</td>
+							<td>$500.00</td>
+							<td>18.03.2022</td>
+							<td>
+								<span class="paid"></span>Paid</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="account-content" id="security">
+			<div class="two-factor-wrapper">
+				<div class="two-factor-content">
+					<h6>Two Factor Authentication</h6>
+					<p>Two-Factor Authentication (2FA) can be used to help protect your account</p>
+				</div>
+				<a href="#" class="button button--effect">Enable</a>
+			</div>
+			<div class="account-content-single account-content-single__alt">
+				<div class="intro">
+					<h5>Your devices</h5>
+					<a href="#">Log out on all devices</a>
+				</div>
+				<div class="account-content-single__inner account-content-single__inner-alt">
+					<div class="content">
+						<img src="assets/images/icons/mobile.png" alt="Mobile"/>
+						<div class="content__alt">
+							<h6>Iphone 13 Pro Max</h6>
+							<p>New York City · June 20 at 14:00</p>
+						</div>
+					</div>
+					<div class="content-right">
+						<a href="login.html" class="button button--effect alt">Log Out</a>
+					</div>
+				</div>
+				<div class="account-content-single__inner account-content-single__inner-alt">
+					<div class="content">
+						<img src="assets/images/icons/tablet.png" alt="Tablet"/>
+						<div class="content__alt">
+							<h6>iPad Pro</h6>
+							<p>New York City · June 20 at 14:00</p>
+						</div>
+					</div>
+					<div class="content-right">
+						<a href="login.html" class="button button--effect alt">Log Out</a>
+					</div>
+				</div>
+				<div class="account-content-single__inner account-content-single__inner-alt">
+					<div class="content">
+						<img src="assets/images/icons/desktop.png" alt="Desktop"/>
+						<div class="content__alt">
+							<h6>iMac OSX</h6>
+							<p>New York City · June 20 at 14:00</p>
+						</div>
+					</div>
+					<div class="content-right">
+						<a href="login.html" class="button button--effect alt">Log Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

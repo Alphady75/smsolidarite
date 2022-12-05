@@ -1,0 +1,860 @@
+{% extends 'base.html.twig' %} 
+
+{% block title %}Accueil{% endblock %} {% block body %}
+<!-- ==== hero section start ==== -->
+<section
+  class="hero hero--two pos__rel over__hi bg__img mb-0 pb-5"
+  data-background="{{ asset('themes/front/assets/images/hero/hero-two-bg.png') }}"
+>
+  <div class="container">
+    <div class="hero__area">
+      <div class="row">
+        <div class="col-lg-7 col-xxl-6">
+          <div class="hero__content">
+            <h5 class="neutral-top">Entraide et Solidarité.</h5>
+            <h1>
+              Investir en toute <span>simplicité</span> et
+              <span>transparence</span>
+            </h1>
+            <p class="primary neutral-bottom">
+              Investissez seulement 10 $ aujourd’hui et gagner environ 300.000 $
+              demain
+            </p>
+            <div class="hero__cta__group">
+              <a href="properties.html" class="button button--effect"
+                >Commencer Maintenant</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-xxl-6">
+          <div class="hero__illustration d-none d-lg-block">
+            <img
+              src="{{ asset('themes/front/assets/images/hero/hero-two-illustration.png') }}"
+              alt="Hero Illustration"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #hero section end ==== -->
+
+<!-- ==== #header end ==== -->
+<!-- ==== market section start ==== -->
+<section class="market market__two section__space over__hi mb-0 mt-0 pt-5 pb-3">
+  <div class="container">
+    <div class="market__area">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 col-xl-5">
+          <div class="market__thumb thumb__rtl column__space d-none d-lg-block">
+            <img
+              src="{{ asset('themes/front/assets/images/affiliate-illustration.png') }}"
+              alt="Affiliate Program"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-6 offset-xl-1">
+          <div class="content">
+            <h5 class="neutral-top">{{ appName }}</h5>
+            <h2>Solidarité intelligente</h2>
+            <p>
+              <strong>{{ appName }}</strong> est une plate-forme de
+              financement participatif "de dons avec récompenses" basée sur
+              l'entraide et la solidarité. Nous sommes une association ayant
+              pour vocation de rassembler autour d'une plateforme entièrement
+              décentralisée et sécurisée, une foule solidaire de personnes à
+              travers le monde à fin de leur permettre de s'auto-financer. On
+              parle alors du financement de la foule par la foule.
+            </p>
+            <a href="registration.html" class="button button--effect"
+              >En savoir plus</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #market section end ==== -->
+
+<!-- ==== start step section start ==== -->
+<section class="start start--two section__space__top">
+  <div class="container">
+    <div class="start__area wow fadeInUp">
+      <div class="section__header">
+        <h5 class="neutral-top">Changez votre façon d’investir.</h5>
+        <h2>Comment ça marche.</h2>
+        <p class="neutral-bottom">
+          Le système {{ appName }} repose sur 3 matrices ayant chacune 8
+          niveaux ou palier successifs avec des gains croissants par niveau.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-xl-4">
+          <div class="start__single__item column__space--secondary">
+            <div class="img__box">
+              <img
+                src="{{ asset('themes/front/assets/images/step/browse.png') }}"
+                alt="Browse Properties"
+              />
+              <div class="step__count">
+                <h4>01</h4>
+              </div>
+            </div>
+            <h4>Inscrivez vous</h4>
+            <p class="neutral-bottom">
+              Inscrivez-vous à partir de la matrice 1.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="start__single__item column__space--secondary">
+            <div class="img__box arrow__container">
+              <img
+                src="{{ asset('themes/front/assets/images/step/invest.png') }}"
+                alt="View Details & Invest"
+              />
+              <div class="step__count">
+                <h4>02</h4>
+              </div>
+            </div>
+            <h4>Faites votre don de 10 $</h4>
+            <p class="neutral-bottom">
+              Vous faites votre don de 10$ ainsi, vous accédez au niveau 1 de la
+              matrice 1 et vous devenez membre actif.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="start__single__item">
+            <div class="img__box">
+              <img src="{{ asset('themes/front/assets/images/step/earn.png') }}" alt="Earn and Track" />
+              <div class="step__count">
+                <h4>03</h4>
+              </div>
+            </div>
+            <h4>Gagnez et suivez</h4>
+            <p class="neutral-bottom">
+              Commencez à recevoir vos gains (à chaque niveau, vous recevez 8
+              dons de 8 personnes).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #start step section end ==== -->
+
+<!-- ==== market section start ==== -->
+<section class="market market--two section__space__bottom">
+  <div class="container">
+    <div
+      class="market__area market__area--two section__space bg__img"
+      data-background="{{ asset('themes/front/assets/images/light-two.png') }}"
+    >
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6">
+          <div class="content">
+            <h5 class="neutral-top">Véritable garantie pour demain</h5>
+            <h2>
+              Vous investissez. <strong>{{ appName }}</strong> fait le reste
+            </h2>
+            <p>
+              Investissez en toute simplicité et transparence via
+              <strong>{{ appName }}</strong>. Rejoignez-nous et découvrez une
+              façon plus intelligente et meilleure d'investir avec seulement 10
+              $.
+            </p>
+            <a href="properties.html" class="button button--effect"
+              >Commencer maintenant</a
+            >
+            <img src="{{ asset('themes/front/assets/images/arrow.png') }}" alt="Go to" />
+          </div>
+        </div>
+      </div>
+      <img
+        src="{{ asset('themes/front/assets/images/market-two-illustration.png') }}"
+        alt="Explore the Market"
+        class="d-none d-lg-block market__two__thumb"
+      />
+    </div>
+    <div class="market__features">
+      <div class="row">
+        <div class="col-md-6 col-xl-4">
+          <div class="market__features__single shadow__effect__secondary">
+            <img
+              src="{{ asset('themes/front/assets/images/icons/gain.png') }}"
+              alt="Gagnez instantanément"
+            />
+            <h4>Gagnez instantanément</h4>
+            <p class="neutral-bottom">
+              Commencez à recevoir vos gains à chaque niveau.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div
+            class="market__features__single market__features__single--alt shadow__effect"
+          >
+            <img src="{{ asset('themes/front/assets/images/icons/noticed.png') }}" alt="Être averti" />
+            <h4>Être averti</h4>
+            <p class="neutral-bottom">
+              Soyez averti à chaque changement de niveau via la plate-forme.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="market__features__single alt shadow__effect__secondary">
+            <img
+              src="{{ asset('themes/front/assets/images/icons/focus.png') }}"
+              alt="Concentrez-vous sur vos gains"
+            />
+            <h4>Concentrez-vous sur vos gains</h4>
+            <p class="neutral-bottom">
+              Vous avez une seule dépense à faire, c'est 10$ et le système
+              s’occupe de tout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #market section end ==== -->
+
+<!-- ==== platform section start ==== -->
+<section class="platform section__space pos__rel over__hi">
+  <div class="container">
+    <div class="platform__area">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6">
+          <div class="content">
+            <h5>Changez votre façon d’investir</h5>
+            <h2>
+              Ce que vous attendez d'une plateforme d'investissement moderne
+            </h2>
+            <p>
+              Investissez et gérez votre portefeuille via la plate-forme. Suivez
+              vos performances en toute sécurité et observez l'acquisition,
+              l'amélioration et le changement des niveaux 24h/24.
+            </p>
+            <a href="properties.html" class="button button--effect"
+              >Commencer maintenant</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="platform__thumb thumb__ltr d-none d-lg-block">
+            <img
+              src="{{ asset('themes/front/assets/images/overview/platform-illustration.png') }}"
+              alt="Platform"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #platform section end ==== -->
+
+<!-- ==== portfolio section start ==== -->
+<div class="portfolio__overview__wrapper">
+  <div class="container">
+    <div class="portfolio__overview">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio__overview__single column__space">
+            <img src="{{ asset('themes/front/assets/images/icons/investors.png') }}" alt="Investors" />
+            <div>
+              <h2 class="counterTwo">+6648</h2>
+              <p>Inscriptions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio__overview__single column__space">
+            <img src="{{ asset('themes/front/assets/images/icons/completed.png') }}" alt="completed" />
+            <div>
+              <h2 class="counterTwo">+1102</h2>
+              <p>Investisseurs cette année</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <div class="portfolio__overview__single">
+            <img
+              src="{{ asset('themes/front/assets/images/icons/annual-return.png') }}"
+              alt="Average Annual Return"
+            />
+            <div>
+              <h2><span class="counterTwo">1,16</span>%</h2>
+              <p>Rendement annuel moyen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section
+  class="portfolio section__space bg__img over__hi"
+  data-background="{{ asset('themes/front/assets/images/portfolio-bg.png') }}"
+>
+  <div class="container">
+    <div class="portfolio__area">
+      <div class="portfolio__inner section__space__top">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6">
+            <div class="content column__space">
+              <h5 class="neutral-top">
+                Construire votre portefeuille dès aujourd’hui.
+              </h5>
+              <h2>Bon à savoir.</h2>
+              <p>
+                Investir avec <strong>{{ appName }}</strong>, c’est comme
+                planter une graine qui, par la suite, sera arrosé par la pluie.
+                Vous avez une seule et unique dépense à faire sur la
+                plate-forme, c'est 10$, vos Réinvestissements pour accéder aux
+                niveaux supérieurs sont automatiquement effectués par le
+                système.
+              </p>
+              <div class="port__cta__group">
+                <a href="properties.html" class="button button--effect"
+                  >Commencer maintenant</a
+                >
+                <a
+                  href="https://www.youtube.com/watch?v=LCihLrSehCo"
+                  target="_blank"
+                  class="button button--secondary button--effect video__popup"
+                  ><i class="fa-solid fa-play"></i> Comment ça marche?</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="port__thumb thumb__ltr">
+              <img src="{{ asset('themes/front/assets/images/tower.png') }}" alt="Tower" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #portfolio section end ==== -->
+
+<!-- ==== why invest section start ==== -->
+<section class="why__invest section__space">
+  <div class="container">
+    <div class="why__invest__area wow fadeInUp">
+      <div class="row d-flex align-items-center">
+        <div class="col-xxl-6">
+          <div class="content column__space--secondary">
+            <h5 class="neutral-top">Rejoignez-nous dès aujourd’hui</h5>
+            <h2>Pourquoi investir dès aujourd’hui ?</h2>
+            <p>
+              Commencez dès aujourd'hui à constituer votre portefeuille
+              d'investissement immobilier avec seulement 100 €.
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="why__invest__single shadow__effect__secondary">
+                <img src="{{ asset('themes/front/assets/images/icons/passive.png') }}" alt="Passive" />
+                <h5>Revenu passif</h5>
+                <p class="neutral-bottom">
+                  Gagner des revenus sans gestion active
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="why__invest__single shadow__effect__secondary">
+                <img
+                  src="{{ asset('themes/front/assets/images/icons/stable.png') }}"
+                  alt="Stable Cash Flow"
+                />
+                <h5>Flux de trésorerie stable</h5>
+                <p class="neutral-bottom">
+                  Les paiements de location fournissent des flux de trésorerie
+                  stables grâce aux versements de dividendes
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-xxl-3">
+          <div class="why__invest__single shadow__effect__secondary">
+            <img src="{{ asset('themes/front/assets/images/icons/tax.png') }}" alt="Tax Advantages" />
+            <h5>Avantages fiscaux</h5>
+            <p class="neutral-bottom">
+              Il existe de nombreux allégements fiscaux et déductions favorables
+              associés
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xxl-3">
+          <div class="why__invest__single shadow__effect__secondary">
+            <img src="{{ asset('themes/front/assets/images/icons/capital.png') }}" alt="Capital Appr'n" />
+            <h5>Capital Appr'n</h5>
+            <p class="neutral-bottom">
+              Historiquement, les prix de l'immobilier ont augmenté au cours de
+              la période difficile
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xxl-3">
+          <div class="why__invest__single shadow__effect__secondary">
+            <img
+              src="{{ asset('themes/front/assets/images/icons/protection.png') }}"
+              alt="Inflation protection"
+            />
+            <h5>Protection contre l'inflation</h5>
+            <p class="neutral-bottom">
+              La valeur des maisons et les loyers augmentent généralement en
+              période d'inflation
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xxl-3">
+          <div class="why__invest__single shadow__effect__secondary">
+            <img
+              src="{{ asset('themes/front/assets/images/icons/diversifaction.png') }}"
+              alt="Diversification"
+            />
+            <h5>Diversification</h5>
+            <p class="neutral-bottom">
+              Faible corrélation avec les autres classes d'actifs
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #why invest section end ==== -->
+
+<!-- ==== community section start ==== -->
+<section
+  class="community section__space__top over__hi bg__img"
+  data-background="{{ asset('themes/front/assets/images/community-bg.png') }}"
+>
+  <div class="container">
+    <div class="community__area">
+      <div class="section__header">
+        <h5 class="neutral-top">C’est maintenant ou jamais</h5>
+        <h2>Rejoignez des milliers d'investisseurs dès aujourd’hui</h2>
+        <p class="neutral-bottom">
+          Investissez seulement 10 $ aujourd’hui et gagner environ 300.000 $
+          demain.
+        </p>
+      </div>
+      <div class="comunity-wrapper section__space">
+        <div class="buttons">
+          <a href="registration.html" class="button button--effect"
+            >Commencer aujourd’hui</a
+          >
+        </div>
+        <div class="comunity-area">
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/1.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/2.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/3.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/4.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/5.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/6.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/7.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/8.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/9.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/10.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/11.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/12.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/13.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/14.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/15.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/16.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/17.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/18.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/19.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/22.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/20.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/21.png') }}" alt="comunity" />
+          </div>
+        </div>
+        <div class="comunity-area two">
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/1.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/2.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/3.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/4.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/5.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/6.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/7.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/8.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/9.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/10.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/11.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/12.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/13.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/14.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/15.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/16.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/17.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/18.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/19.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/22.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/20.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/21.png') }}" alt="comunity" />
+          </div>
+        </div>
+        <div class="comunity-area three">
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/1.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/2.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/3.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/4.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/5.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/6.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/7.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/8.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/9.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/10.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/11.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/12.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/13.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/14.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/15.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/16.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/17.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/18.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/19.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/22.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/20.png') }}" alt="comunity" />
+          </div>
+          <div class="comunity-item">
+            <img src="{{ asset('themes/front/assets/images/community/21.png') }}" alt="comunity" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #community section end ==== -->
+
+<!-- ==== testimonial section start ==== -->
+<section
+  class="testimonial testimonial--two section__space pos__rel over__hi bg__img"
+  data-background="{{ asset('themes/front/assets/images/testimonial/dot-map.png') }}"
+>
+  <div class="container">
+    <div class="testimonial__area">
+      <div class="section__header">
+        <h5 class="neutral-top">
+          Ils font confiances <strong>{{ appName }}</strong>
+        </h5>
+        <h2>
+          Reconnu par plus de 10 000 utilisateurs dans le monde depuis 2006
+        </h2>
+        <p class="neutral-bottom">
+          Ils parlent de leurs expériences ou parcours sur
+          <strong>{{ appName }}</strong>.
+        </p>
+      </div>
+      <div class="testimonial__item__wrapper">
+        <div class="testimonial__support">
+          <div
+            class="testimonial__item bg__img"
+            data-background="{{ asset('themes/front/assets/images/testimonial/quote.png') }}"
+          >
+            <div class="testimonial__author__ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tertiary">
+              Very trustworthy and clearly platform to invest in real state.
+              Safe investment with monthly payouts. Really recommended!
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__author__info">
+                <div class="avatar__wrapper">
+                  <img
+                    src="{{ asset('themes/front/assets/images/testimonial/avatar.png') }}"
+                    alt="Allan Murphy"
+                  />
+                </div>
+                <div>
+                  <h5>Allan Murphy</h5>
+                  <p class="neutral-bottom">United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__support">
+          <div
+            class="testimonial__item bg__img"
+            data-background="{{ asset('themes/front/assets/images/testimonial/quote.png') }}"
+          >
+            <div class="testimonial__author__ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tertiary">
+              Very trustworthy and clearly platform to invest in real state.
+              Safe investment with monthly payouts. Really recommended!
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__author__info">
+                <div class="avatar__wrapper">
+                  <img
+                    src="{{ asset('themes/front/assets/images/testimonial/avatar.png') }}"
+                    alt="Allan Murphy"
+                  />
+                </div>
+                <div>
+                  <h5>Allan Murphy</h5>
+                  <p class="neutral-bottom">United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__support">
+          <div
+            class="testimonial__item bg__img"
+            data-background="{{ asset('themes/front/assets/images/testimonial/quote.png') }}"
+          >
+            <div class="testimonial__author__ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tertiary">
+              Very trustworthy and clearly platform to invest in real state.
+              Safe investment with monthly payouts. Really recommended!
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__author__info">
+                <div class="avatar__wrapper">
+                  <img
+                    src="{{ asset('themes/front/assets/images/testimonial/avatar.png') }}"
+                    alt="Allan Murphy"
+                  />
+                </div>
+                <div>
+                  <h5>Allan Murphy</h5>
+                  <p class="neutral-bottom">United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__support">
+          <div
+            class="testimonial__item bg__img"
+            data-background="{{ asset('themes/front/assets/images/testimonial/quote.png') }}"
+          >
+            <div class="testimonial__author__ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tertiary">
+              Very trustworthy and clearly platform to invest in real state.
+              Safe investment with monthly payouts. Really recommended!
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__author__info">
+                <div class="avatar__wrapper">
+                  <img
+                    src="{{ asset('themes/front/assets/images/testimonial/avatar.png') }}"
+                    alt="Allan Murphy"
+                  />
+                </div>
+                <div>
+                  <h5>Allan Murphy</h5>
+                  <p class="neutral-bottom">United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__support">
+          <div
+            class="testimonial__item bg__img"
+            data-background="{{ asset('themes/front/assets/images/testimonial/quote.png') }}"
+          >
+            <div class="testimonial__author__ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tertiary">
+              Very trustworthy and clearly platform to invest in real state.
+              Safe investment with monthly payouts. Really recommended!
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__author__info">
+                <div class="avatar__wrapper">
+                  <img
+                    src="{{ asset('themes/front/assets/images/testimonial/avatar.png') }}"
+                    alt="Allan Murphy"
+                  />
+                </div>
+                <div>
+                  <h5>Allan Murphy</h5>
+                  <p class="neutral-bottom">United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==== #testimonial section end ==== -->
+{% endblock %}

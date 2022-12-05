@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- required meta -->
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- #favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon"/>
+	<!-- #title -->
+	<title>{% block title %}{{ appName }}{% endblock %}</title>
+	<!-- #keywords -->
+	<meta name="keywords" content="Real Estate, Investment, Properties, Rent"/>
+	<!-- #description -->
+	<meta name="description" content="Real Estate Investment For Everyone"/>
+	<!-- #author -->
+	<meta name="author" content="Pixelaxis"/>
+    <style type="text/css">
+    	p{
+    		font-size: 1em!important;
+    	}
+		a{
+			font-size: 1em;
+		}
+		footer nav .nav-link{
+			font-size: .9em!important;
+			font-weight: 400!important;
+		}
+		form small{
+			margin-top: 10px!important;
+			display: block;
+			padding-left: 10px;
+		}
+		.small{
+			line-height: 14px;
+		}
+		.form-error-message{
+			color: rgb(252, 10, 10)!important;
+			font-weight: 400;
+			padding-left: 5px;
+		}
+		.form-error-icon{
+			display: none!important;
+		}
+		.radius{
+			border-radius: 10px;
+		}
+		.form select,
+		.form input[type=text],
+		.form input[type=email]{
+			height: 60px;
+			background-color: #ffffff;
+			border: 1px solid #c3c7e4;
+		}
+		.form textarea{
+			border: 1px solid #c3c7e4;
+			height: 200px;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		form label{
+			font-weight: 400;
+			margin-bottom: -15px;
+			margin-left: 10px;
+			display: inline-block;
+			padding: 0;
+			background-color: white;
+			z-index: 100!important;
+			position: relative!important;
+		}
+		label[class=radio]{
+			margin-bottom: inherit;
+			margin-left: inherit;
+		}
+		.input-group{
+			z-index: 0!important;
+		}
+		.button, form label, select, .small, .form textarea,
+		.form input[type=text]{
+			font-size: .9em!important;
+		}
+		.nav .nav-item .nav-link, .form-error-message, form small{
+			font-size: .7em!important;
+		}
+		.comunity-area img{
+			width: 200px!important;
+			height: 200px!important;
+			border: 1px solid rgb(56, 56, 56)!important;
+		}
+		.community{
+			border: 1px solid rgb(230, 230, 230);
+		}
+		.input-group-text{
+			height: 100%!important;
+			background: transparent!important;
+		}
+		.vich-image img{
+			display: block;
+			border-radius: 15px;
+			margin: 30px 0;
+		}
+    </style>
+
+    {% block stylesheets %}
+		<!-- bootstrap five css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/bootstrap/css/bootstrap.min.css') }}"/>
+		<!-- font awesome six css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/font-awesome/css/all.min.css') }}"/>
+		<!-- nice select css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/nice-select/css/nice-select.css') }}"/>
+		<!-- magnific popup css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/magnific-popup/css/magnific-popup.css') }}"/>
+		<!-- slick css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/slick/css/slick.css') }}"/>
+		<!-- animate css -->
+		<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/animate/animate.css') }}"/>
+
+		<!-- ==== css dependencies end ==== -->
+
+		<!-- main css -->
+        <link rel="stylesheet" href="{{ asset('themes/front/assets/css/style.css') }}">
+
+		{{ encore_entry_link_tags('app') }}
+
+	{% endblock %}
+</head>
+<body class="bg-light" style="padding-bottom: 100px;">
+
+	{% block progress %}{% endblock %}
+
+	<!-- ==== #dashboard header end ==== -->
+	{% block header %}
+        {% include "partials/front/user/_header.html.twig" %}
+    {% endblock %}
+	<!-- ==== #dashboard header end ==== -->
+
+	<!-- ==== dashboard section start ==== -->
+    <div class="dashboard section__space__bottom">
+        <div class="container">
+            <div class="dashboard__area">
+                <div class="row">
+                    <div class="col-xxl-3">
+                       {{ include('partials/front/user/_sidebar.html.twig') }}
+                    </div>
+                    <div class="{% block col %}col-xxl-12 col-sm-12{% endblock %} mx-auto">
+                        <div class="main__content">
+                            <div class="collapse__sidebar">
+								<h4>Tableau de bord</h4>
+                                <a href="javascript:void(0)" class="collapse__sidebar__btn">
+                                    <i class="fa-solid fa-bars-staggered"></i>
+                                </a>
+                            </div>
+                            <div class="main__content-dashboard">
+
+								{% block breadcrumb %}
+
+                                <div class="breadcrumb-dashboard">
+                                    <h5 class="h5">Compte</h5>
+                                    <div>
+                                        <a href="{{ path('user_dashboard') }}">Accueil</a>
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <a href="{{ path('user_compte') }}">Compte</a>
+                                    </div>
+                                </div>
+
+								{% endblock %}
+
+                                {% include "partials/front/_flash_message.html.twig" %}
+
+                                <div class="account-info">
+                                    {% block body %}{% endblock %}
+                                </div>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== #dashboard section end ==== -->
+	
+	<!-- ==== footer section start ==== -->
+    <footer class="footer dashboard-footer pos__rel over__hi">
+        <div class="container">
+            <div class="footer__credit">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <div class="footer__copyright">
+                            <p class="text-center py-3" style="color: #213186!important;">
+                                &copy; 2022 SMART SOLIDARITY conçue par
+                                <a href="https://themeforest.net/user/pixelaxis"
+                                  >BAYE Conception</a
+                                >
+                              </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social">
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==== #footer section end ==== -->
+
+    <!-- Scroll To Top -->
+    <a href="javascript:void(0)" class="scrollToTop">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+
+    {% block javascripts %}
+
+			<!-- ==== js dependencies start ==== -->
+
+			<!-- jquery -->
+            <script src="{{ asset('themes/front/assets/vendor/jquery/jquery-3.6.0.min.js') }}"> </script>
+			<!-- bootstrap five js -->
+			<script src="{{ asset('themes/front/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+			<!-- nice select js -->
+			<script src="{{ asset('themes/front/assets/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>
+			<!-- magnific popup js -->
+			<script src="{{ asset('themes/front/assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js') }}"></script>
+			<!-- slick js -->
+			<script src="{{ asset('themes/front/assets/vendor/slick/js/slick.js') }}"></script>
+			<!-- shuffle js -->
+			<script src="{{ asset('themes/front/assets/vendor/shuffle/shuffle.min.js') }}"></script>
+			<!-- jquery downcount timer -->
+			<script src="{{ asset('themes/front/assets/vendor/downcount/jquery.downCount.js') }}"></script>
+			<!-- waypoints js -->
+			<script src="{{ asset('themes/front/assets/vendor/waypoints-js/jquery.waypoints.min.js') }}"></script>
+			<!-- counter up js -->
+			<script src="{{ asset('themes/front/assets/vendor/counter-js/jquery.counterup.min.js') }}"></script>
+			<!-- apex chart js -->
+			<script src="{{ asset('themes/front/assets/vendor/apex-chart/apexcharts.min.js') }}"></script>
+			<!-- wow js -->
+			<script src="{{ asset('themes/front/assets/vendor/wow/wow.min.js') }}"></script>
+
+			<!-- ==== js dependencies end ==== -->
+
+			<!-- plugin js -->
+			<script src="{{ asset('themes/front/assets/js/plugin.js') }}"></script>
+			<!-- main js -->
+			<script src="{{ asset('themes/front/assets/js/main.js') }}"></script>
+
+    {{ encore_entry_script_tags('app') }}
+    
+    {% endblock %}
+</body>
+</html>

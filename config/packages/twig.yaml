@@ -1,5 +1,17 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    form_themes: ['bootstrap_5_layout.html.twig']
+    #form_themes: ['bootstrap_4_Horizontal_layout.html.twig']
+    globals:
+        app_environement: '%env(APP_ENV)%'
+        appName: 'SMART SOLIDARITY'
+        pays: ''
+        appEmail: 'immosercure@gmail.com'
+        appPhone: '(123)456-7890'
+        appAdresse: 'N° Ruelle/Avenue'
+        currency: ' €'
+        ashtag: '#'
+        appConcepteur: "HL Conception"
 
 when@test:
     twig:

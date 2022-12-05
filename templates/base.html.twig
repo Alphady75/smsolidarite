@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<!-- required meta -->
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- #favicon -->
+		<link rel="shortcut icon" href="{{ asset('themes/front/assets/images/favicon.png') }}" type="image/x-icon"/>
+		<!-- #title -->
+		<title>
+			{% block title %}
+				{{ appName }}
+			{% endblock %}
+		</title>
+		<!-- #keywords -->
+		<meta name="keywords" content="Real Estate, Investment, Properties, Rent"/>
+		<!-- #description -->
+		<meta name="description" content="Real Estate Investment For Everyone"/>
+		<!-- #author -->
+		<meta name="author" content="Pixelaxis"/>
+
+		<!-- ==== css dependencies start ==== -->
+
+		{% block stylesheets %}
+			<!-- bootstrap five css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/bootstrap/css/bootstrap.min.css') }}"/>
+			<!-- font awesome six css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/font-awesome/css/all.min.css') }}"/>
+			<!-- nice select css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/nice-select/css/nice-select.css') }}"/>
+			<!-- magnific popup css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/magnific-popup/css/magnific-popup.css') }}"/>
+			<!-- slick css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/slick/css/slick.css') }}"/>
+			<!-- animate css -->
+			<link rel="stylesheet" href="{{ asset('themes/front/assets/vendor/animate/animate.css') }}"/>
+
+			<!-- ==== css dependencies end ==== -->
+
+			<!-- main css -->
+            <link rel="stylesheet" href="{{ asset('themes/front/assets/css/style.css') }}">
+
+			{{ encore_entry_link_tags('app') }}
+
+		{% endblock %}
+	</head>
+
+	<body>
+
+		<!-- ==== header start ==== -->
+		{% block header %}
+
+			{{ include('partials/front/_header.html.twig') }}
+
+		{% endblock %}
+		<!-- ==== #header end ==== -->
+
+		{% block body %}{% endblock %}
+
+		<!-- ==== footer section start ==== -->
+		{% block footer %}
+
+			{{ include('partials/front/_footer.html.twig') }}
+
+		{% endblock %}
+		<!-- ==== #footer section end ==== -->
+
+		<!-- Scroll To Top -->
+		<a href="javascript:void(0)" class="scrollToTop">
+			<i class="fa-solid fa-angles-up"></i>
+		</a>
+
+		{% block javascripts %}
+
+			<!-- ==== js dependencies start ==== -->
+
+			<!-- jquery -->
+            <script src="{{ asset('themes/front/assets/vendor/jquery/jquery-3.6.0.min.js') }}"> </script>
+			<!-- bootstrap five js -->
+			<script src="{{ asset('themes/front/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+			<!-- nice select js -->
+			<script src="{{ asset('themes/front/assets/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>
+			<!-- magnific popup js -->
+			<script src="{{ asset('themes/front/assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js') }}"></script>
+			<!-- slick js -->
+			<script src="{{ asset('themes/front/assets/vendor/slick/js/slick.js') }}"></script>
+			<!-- shuffle js -->
+			<script src="{{ asset('themes/front/assets/vendor/shuffle/shuffle.min.js') }}"></script>
+			<!-- jquery downcount timer -->
+			<script src="{{ asset('themes/front/assets/vendor/downcount/jquery.downCount.js') }}"></script>
+			<!-- waypoints js -->
+			<script src="{{ asset('themes/front/assets/vendor/waypoints-js/jquery.waypoints.min.js') }}"></script>
+			<!-- counter up js -->
+			<script src="{{ asset('themes/front/assets/vendor/counter-js/jquery.counterup.min.js') }}"></script>
+			<!-- apex chart js -->
+			<script src="{{ asset('themes/front/assets/vendor/apex-chart/apexcharts.min.js') }}"></script>
+			<!-- wow js -->
+			<script src="{{ asset('themes/front/assets/vendor/wow/wow.min.js') }}"></script>
+
+			<!-- ==== js dependencies end ==== -->
+
+			<!-- plugin js -->
+			<script src="{{ asset('themes/front/assets/js/plugin.js') }}"></script>
+			<!-- main js -->
+			<script src="{{ asset('themes/front/assets/js/main.js') }}"></script>
+
+
+			{{ encore_entry_script_tags('app') }}
+
+		{% endblock %}
+
+	</body>
+
 </html>

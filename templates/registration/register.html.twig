@@ -1,0 +1,59 @@
+{% extends 'auth.html.twig' %} 
+
+{% block title %}Investir{% endblock %} 
+
+{% block body %}
+<h4 class="neutral-top">Inscription</h4>
+<p>
+  J'ai déjà un compte?
+  <a href="{{ path('app_login') }}">Connexion</a>
+</p>
+
+{{ form_start(registrationForm, {attr: {class: 'mt-3'}}) }} 
+
+{% for flashError in app.flashes('verify_email_error') %}
+<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+{% endfor %}
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="input input--secondary">
+      <label for="firstName">Prénom(s)*</label>
+      {{ form_row(registrationForm.prenom) }}
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="input input--secondary">
+      <label for="lastName">Nom(s)*</label>
+      {{ form_row(registrationForm.nom) }}
+    </div>
+  </div>
+</div>
+<div class="regi__type mt-0 pt-0">
+  <label for="typeSelect">Type de compte</label>
+  <div class="check">
+	{{ form_row(registrationForm.compte) }}
+  </div>
+</div>
+<div class="input input--secondary">
+  <label for="registrationMail">Email*</label>
+  {{ form_row(registrationForm.email) }}
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="input input--secondary">
+      <label for="regiPass">Mot de passe*</label>
+      {{ form_row(registrationForm.plainPassword) }}
+    </div>
+  </div>
+</div>
+<div class="" style="text-align: left !important">
+  {{ form_row(registrationForm.agreeTerms) }}
+</div>
+<div class="input__button">
+  <button type="submit" class="button button--effect" formnovalidate>Créer mon compte</button>
+</div>
+
+{{ form_end(registrationForm) }}
+
+{% endblock %}

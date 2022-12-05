@@ -1,0 +1,52 @@
+<header class="dashboard-header" style="z-index: 900!important;">
+	<div class="container">
+		<div class="dashboard-header__area">
+			<a href="{{ path('user_dashboard') }}" class="header-logo">
+				<img src="{{ asset('themes/front/assets/images/logo.jpg') }}" alt="{{ appName }}" class="logo"/>
+			</a>
+			<div class="dashboard-header__area-content">
+				<a class="button button--effect text-light" href="">
+					<img src="{{ asset('themes/front/assets/images/direction.png') }}" alt="Investment"/>
+					Nouvel investissement
+				</a>
+				<a href="{{ path('user_compte') }}" class="profile">
+					<img src="{{ app.user.avatar ? vich_uploader_asset(app.user) : asset('img/avatar.png') | imagine_filter('small_avatar') }}" alt="Profile"/>
+				</a>
+				<div class="notification-area">
+					<a href="javascript:void(0)" class="icon__wrapper notification__icon">
+						<i class="fa-solid fa-bell"></i>
+						<span>03</span>
+					</a>
+					<div class="notification__wrapper">
+						<div class="notification__head">
+							<p class="text-center">3 New</p>
+							<p class="text-center">Notification</p>
+						</div>
+						<div class="notification__single-wrapper">
+							<div class="notification__single">
+								<a href="javascript:void(0)">
+									<h6>Welcome to spoment</h6>
+									<p>We are happy to welcome you to our community spoment.
+									</p>
+								</a>
+								<p class="time">2 hours ago</p>
+							</div>
+							<div class="notification__single">
+								<a href="javascript:void(0)">
+									<h6>Welcome to spoment</h6>
+									<p>We are happy to welcome you to our community spoment.
+									</p>
+								</a>
+								<p class="time">2 hours ago</p>
+							</div>
+						</div>
+
+						<div class="mark__read">
+							<a href="#">Mark all as read</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,24 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Mettre à jour mon profil{% endblock %}
+
+{% block pagetitle %}
+<div class="app-page-title">
+	<div class="page-title-wrapper">
+		<div class="page-title-heading">
+			<div class="page-title-icon">
+				<i class="metismenu-icon pe-7s-user"></i>
+			</div>
+			<div>
+				Compte {{ user.compte }}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block body %}
+
+{{ include('user/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+{% endblock %}

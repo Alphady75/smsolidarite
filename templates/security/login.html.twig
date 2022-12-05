@@ -1,0 +1,61 @@
+{% extends 'auth.html.twig' %} 
+
+{% block title %}Connexion{% endblock %} {% block body %}
+
+<h4 class="neutral-top">Connexion</h4>
+
+<p>Je n'ai aucun compte? <a href="{{ path('app_register') }}"> S'inscrire ici.</a></p>
+            
+<form method="post" name="login__form" class="form__login">
+    {% if error %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="text-align: left!important">
+        <p class="font-weight-light lead">Identifiant ou mot de passe incorect</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+
+  <div class="input input--secondary">
+    <label for="loginMail">Email*</label>
+    <input
+        type="email"
+        value="{{ last_username }}"
+        name="email"
+        id="inputEmail"
+        autocomplete="email"
+        required
+        autofocus
+    />
+  </div>
+  <div class="input input--secondary">
+    <label for="loginPass">Mot de passe*</label>
+    <input
+        type="password"
+        name="password"
+        id="inputPassword"
+        autocomplete="current-password"
+        required
+    />
+  </div>
+  <div class="checkbox login__checkbox">
+    <label>
+      <input
+        type="checkbox"
+        id="remeberPass"
+        name="_remember_me"
+        value="remember"
+      />
+      <span class="checkmark"></span>
+      Restez connecter
+    </label>
+    <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié?</a>
+    <input
+        type="hidden"
+        name="_csrf_token"
+        value="{{ csrf_token('authenticate') }}"
+    />
+  </div>
+  <div class="input__button">
+    <button type="submit" class="button button--effect">Connexion</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table class="table table-borderless">
+        <tbody>
+            <tr>
+                <th>Adresse e-mail</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Compte</th>
+                <td>{{ user.compte }}</td>
+            </tr>
+            <tr>
+                <th>Mot de passe</th>
+                <td>****</td>
+            </tr>
+            <tr>
+                <th><span>{{ user.compte }} depuis</span></th>
+                <td>{{ user.created ? user.created|date('d/m/Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated</th>
+                <td>{{ user.updated ? user.updated|date('d/m/Y') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_compte', {'id': user.id}) }}" class="btn btn-light">Mettre à jour le profil</a>
+
+{% endblock %}
