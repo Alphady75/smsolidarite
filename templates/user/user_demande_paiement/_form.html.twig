@@ -1,0 +1,34 @@
+{{ form_start(form, {attr: {class: 'form'}}) }}
+
+<div class="row">
+    <div class="col-sm-3 text-sm-right">
+        <label for="" class="my-2 mr-3">Montant <span class="text-danger font-weight-bold">*</span></label>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.montant) }}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3 text-sm-right">
+        <label for="" class="my-2 mr-3">Type de virement <span class="text-danger font-weight-bold">*</span></label>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.typeVirement) }}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3 text-sm-right">
+        <label for="" class="my-2 mr-3">Email <span class="text-danger font-weight-bold">*</span></label>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.paiementEmail) }}
+        </div>
+        <button class="button button--effect button--last">{{ button_label|default('Envoyer') }}</button>
+    </div>
+</div>
+{{ form_end(form) }}

@@ -1,20 +1,115 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AproposController!{% endblock %}
+{% block title %}A propos
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<!-- ==== banner section start ==== -->
+	<section class="support__banner contact__banner bg__img clear__top" data-background="{{ asset('themes/front/assets/images/contact-banner-bg.png') }}">
+		<div class="container">
+			<div class="support__banner__area">
+				<div class="support__banner__inner">
+					<h1 class="neutral-top">A propos</h1>
+					<h5 class="neutral-top">Qui sommes nous?</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==== #banner section end ==== -->
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<!-- ==== market section start ==== -->
+	<section class="market market__two section__space over__hi mb-0 mt-0 pt-5 pb-3">
+		<div class="container">
+			<div class="market__area">
+				<div class="row d-flex align-items-center">
+					<div class="col-lg-6 col-xl-5">
+						<div class="market__thumb thumb__rtl column__space d-none d-lg-block">
+							<img src="{{ asset('themes/front/assets/images/affiliate-illustration.png') }}" alt="Affiliate Program"/>
+						</div>
+					</div>
+					<div class="col-lg-6 col-xl-6 offset-xl-1">
+						<div class="content">
+							<h5 class="neutral-top">{{ appName }}</h5>
+							<h2>Solidarité intelligente</h2>
+							<p>
+								<strong>{{ appName }}</strong>
+								est une plate-forme de
+																								              financement participatif "de dons avec récompenses" basée sur
+																								              l'entraide et la solidarité. Nous sommes une association ayant
+																								              pour vocation de rassembler autour d'une plateforme entièrement
+																								              décentralisée et sécurisée, une foule solidaire de personnes à
+																								              travers le monde à fin de leur permettre de s'auto-financer. On
+																								              parle alors du financement de la foule par la foule.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==== #market section end ==== -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/ESPACE DE TRAVAIL/APPLICATION WEB/EN COURS/SMART-SOLIDARITY/src/Controller/AproposController.php'|file_link(0) }}">src/Controller/AproposController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/ESPACE DE TRAVAIL/APPLICATION WEB/EN COURS/SMART-SOLIDARITY/templates/apropos/index.html.twig'|file_link(0) }}">templates/apropos/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<!-- ==== start step section start ==== -->
+	<section class="start start--two section__space__top pb-5">
+		<div class="container">
+			<div class="start__area wow fadeInUp">
+				<div class="section__header">
+					<h5 class="neutral-top">Changez votre façon d’investir.</h5>
+					<h2>Comment ça marche.</h2>
+					<p class="neutral-bottom">
+						Le système
+						{{ appName }}
+						repose sur 3 matrices ayant chacune 8
+												          niveaux ou palier successifs avec des gains croissants par niveau.
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xl-4">
+						<div class="start__single__item column__space--secondary">
+							<div class="img__box">
+								<img src="{{ asset('themes/front/assets/images/step/browse.png') }}" alt="Browse Properties"/>
+								<div class="step__count">
+									<h4>01</h4>
+								</div>
+							</div>
+							<h4>Inscrivez vous</h4>
+							<p class="neutral-bottom">
+								Inscrivez-vous à partir de la matrice 1.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<div class="start__single__item column__space--secondary">
+							<div class="img__box arrow__container">
+								<img src="{{ asset('themes/front/assets/images/step/invest.png') }}" alt="View Details & Invest"/>
+								<div class="step__count">
+									<h4>02</h4>
+								</div>
+							</div>
+							<h4>Faites votre don de 10 $</h4>
+							<p class="neutral-bottom">
+								Vous faites votre don de 10$ ainsi, vous accédez au niveau 1 de la
+																              matrice 1 et vous devenez membre actif.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<div class="start__single__item">
+							<div class="img__box">
+								<img src="{{ asset('themes/front/assets/images/step/earn.png') }}" alt="Earn and Track"/>
+								<div class="step__count">
+									<h4>03</h4>
+								</div>
+							</div>
+							<h4>Gagnez et suivez</h4>
+							<p class="neutral-bottom">
+								Commencez à recevoir vos gains (à chaque niveau, vous recevez 8  dons de 8 personnes).
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==== #start step section end ==== -->
 {% endblock %}

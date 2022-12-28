@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %} 
 
-{% block title %}Accueil{% endblock %} {% block body %}
+{% block title %}{{ appName }}{% endblock %} {% block body %}
 <!-- ==== hero section start ==== -->
 <section
   class="hero hero--two pos__rel over__hi bg__img mb-0 pb-5"
@@ -68,7 +68,7 @@
               travers le monde à fin de leur permettre de s'auto-financer. On
               parle alors du financement de la foule par la foule.
             </p>
-            <a href="registration.html" class="button button--effect"
+            <a href="{{ path('apropos') }}" class="button button--effect"
               >En savoir plus</a
             >
           </div>

@@ -97,4 +97,9 @@ class DemandePaiement
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return 'Paiement de ' . $this->getUser()->getNom();
+    }
 }

@@ -6,13 +6,20 @@
 			</a>
 			<div class="navbar__out order-2 order-xl-3">
 				<div class="nav__group__btn">
-					<a href="{{ path('app_login') }}" class="log d-none d-sm-block">
-						Connexion
-					</a>
-					<a href="{{ path('app_register') }}" class="button button--effect d-none d-sm-block">
-						Investir
-						<i class="fa-solid fa-arrow-right-long"></i>
-					</a>
+					{% if app.user %}
+						<a href="{{ path('user_compte') }}" class="log d-none d-sm-block">
+							<i class="fa fa-user-circle"></i> Mon compte
+						</a>
+					{% else %}
+
+						<a href="{{ path('app_login') }}" class="log d-none d-sm-block">
+							Connexion
+						</a>
+						<a href="{{ path('app_register') }}" class="button button--effect d-none d-sm-block">
+							Investir
+							<i class="fa-solid fa-arrow-right-long"></i>
+						</a>
+					{% endif %}
 				</div>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle Primary Nav">
 					<span class="icon-bar top-bar"></span>
@@ -37,18 +44,16 @@
 						<a class="nav-link" href="{{ path('contact') }}">Contact</a>
 					</li>
 					{% if app.user %}
-					<li class="nav-item">
-						<a class="nav-link" href="{{ path('user_compte') }}">Compte</a>
-					</li>
+					
 					{% else %}
-					<li class="nav-item d-block d-sm-none">
-						<a href="{{ path('app_login') }}" class="nav-link">Connexion</a>
-					</li>
-					<li class="nav-item d-block d-sm-none">
-						<a href="{{ path('app_register') }}" class="button button--effect button--last">Investir
-							<i class="fa-solid fa-arrow-right-long"></i>
-						</a>
-					</li>
+						<li class="nav-item d-block d-sm-none">
+							<a href="{{ path('app_login') }}" class="nav-link">Connexion</a>
+						</li>
+						<li class="nav-item d-block d-sm-none">
+							<a href="{{ path('app_register') }}" class="button button--effect button--last">Investir
+								<i class="fa-solid fa-arrow-right-long"></i>
+							</a>
+						</li>
 					{% endif %}
 				</ul>
 			</div>

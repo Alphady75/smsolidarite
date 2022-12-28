@@ -47,10 +47,12 @@
 		}
 		.form select,
 		.form input[type=text],
+		.form input[type=password],
 		.form input[type=email]{
 			height: 60px;
 			background-color: #ffffff;
 			border: 1px solid #c3c7e4;
+			text-align: left;
 		}
 		.form textarea{
 			border: 1px solid #c3c7e4;
@@ -142,7 +144,7 @@
                     <div class="col-xxl-3">
                        {{ include('partials/front/user/_sidebar.html.twig') }}
                     </div>
-                    <div class="{% block col %}col-xxl-12 col-sm-12{% endblock %} mx-auto">
+                    <div class="{% block col %}col-xxl-9 col-sm-12{% endblock %} mx-auto">
                         <div class="main__content">
                             <div class="collapse__sidebar">
 								<h4>Tableau de bord</h4>
@@ -167,7 +169,7 @@
 
                                 {% include "partials/front/_flash_message.html.twig" %}
 
-                                <div class="account-info">
+                                <div class="">
                                     {% block body %}{% endblock %}
                                 </div>
 								

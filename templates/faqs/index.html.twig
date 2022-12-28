@@ -1,1069 +1,201 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FAQs{% endblock %}
+{% block title %}FAQs
+{% endblock %}
 
 {% block body %}
-<!-- ==== banner section start ==== -->
-    <section
-      class="support__banner bg__img clear__top"
-      data-background="{{ asset('themes/front/assets/images/support-bg.png') }}"
-    >
-      <div class="container">
-        <div class="support__banner__area">
-          <div class="support__banner__inner">
-            <h1 class="neutral-top">FAQs</h1>
-            <div class="faq__tab">
-              <a href="#start" class="faq__tab__btn faq__tab__btn__active"
-                >Getting Started</a
-              >
-              <a href="#funds" class="faq__tab__btn">Adding Funds</a>
-              <a href="#investing" class="faq__tab__btn">Investing</a>
-              <a href="#security" class="faq__tab__btn">Security</a>
-              <a href="#taxes" class="faq__tab__btn">Taxes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ==== #banner section end ==== -->
+	<!-- ==== banner section start ==== -->
+	<section class="support__banner bg__img clear__top" data-background="{{ asset('themes/front/assets/images/support-bg.png') }}">
+		<div class="container">
+			<div class="support__banner__area">
+				<div class="support__banner__inner">
+					<h1 class="neutral-top">FAQs</h1>
+					<div class="faq__tab">
+						<a href="#start" class="faq__tab__btn faq__tab__btn__active">Questions Fréquentes</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==== #banner section end ==== -->
 
-    <!-- ==== faq section start ==== -->
-    <section class="faq section__space">
-      <div class="container">
-        <div class="faq__area">
-          <div class="faq__tab__content" id="start">
-            <div class="faq__group">
-              <div class="accordion" id="accordionExampleStart">
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartOne">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartOne"
-                      aria-expanded="true"
-                      aria-controls="collapseStartOne"
-                    >
-                      What is Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingStartOne"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartTwo">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseStartTwo"
-                    >
-                      What are the benefits of investing via Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingStartTwo"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartThree">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartThree"
-                      aria-expanded="false"
-                      aria-controls="collapseStartThree"
-                    >
-                      What makes Revest different?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingStartThree"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartFour">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartFour"
-                      aria-expanded="false"
-                      aria-controls="collapseStartFour"
-                    >
-                      What happens to my investments if Revest goes into
-                      bankruptcy?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingStartFour"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartFive">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartFive"
-                      aria-expanded="false"
-                      aria-controls="collapseStartFive"
-                    >
-                      What regulations apply to Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingStartFive"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingStartSix">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseStartSix"
-                      aria-expanded="false"
-                      aria-controls="collapseStartSix"
-                    >
-                      How do I start investing in Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseStartSix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingStartSix"
-                    data-bs-parent="#accordionExampleStart"
-                  >
-                    <div class="accordion-body">
-                      <p class="neutral-top neutral-bottom">
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__tab__content" id="funds">
-            <div class="faq__group">
-              <div class="accordion" id="accordionExampleFund">
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundOne">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundOne"
-                      aria-expanded="true"
-                      aria-controls="collapseFundOne"
-                    >
-                      What is Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingFundOne"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundTwo">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseFundTwo"
-                    >
-                      What are the benefits of investing via Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFundTwo"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundThree">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundThree"
-                      aria-expanded="false"
-                      aria-controls="collapseFundThree"
-                    >
-                      What makes Revest different?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFundThree"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundFour">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFundFour"
-                    >
-                      What happens to my investments if Revest goes into
-                      bankruptcy?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFundFour"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundFive">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFundFive"
-                    >
-                      What regulations apply to Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFundFive"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingFundSix">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFundSix"
-                      aria-expanded="false"
-                      aria-controls="collapseFundSix"
-                    >
-                      How do I Fund investing in Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseFundSix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFundSix"
-                    data-bs-parent="#accordionExampleFund"
-                  >
-                    <div class="accordion-body">
-                      <p class="neutral-top neutral-bottom">
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__tab__content" id="investing">
-            <div class="faq__group">
-              <div class="accordion" id="accordionExampleinvesting">
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingOne">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingOne"
-                      aria-expanded="true"
-                      aria-controls="collapseinvestingOne"
-                    >
-                      What is Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headinginvestingOne"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingTwo">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseinvestingTwo"
-                    >
-                      What are the benefits of investing via Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headinginvestingTwo"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingThree">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingThree"
-                      aria-expanded="false"
-                      aria-controls="collapseinvestingThree"
-                    >
-                      What makes Revest different?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headinginvestingThree"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingFour">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingFour"
-                      aria-expanded="false"
-                      aria-controls="collapseinvestingFour"
-                    >
-                      What happens to my investments if Revest goes into
-                      bankruptcy?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headinginvestingFour"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingFive">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingFive"
-                      aria-expanded="false"
-                      aria-controls="collapseinvestingFive"
-                    >
-                      What regulations apply to Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headinginvestingFive"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headinginvestingSix">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="investing"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseinvestingSix"
-                      aria-expanded="false"
-                      aria-controls="collapseinvestingSix"
-                    >
-                      How do I investing investing in Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapseinvestingSix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headinginvestingSix"
-                    data-bs-parent="#accordionExampleinvesting"
-                  >
-                    <div class="accordion-body">
-                      <p class="neutral-top neutral-bottom">
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__tab__content" id="security">
-            <div class="faq__group">
-              <div class="accordion" id="accordionExamplesecurity">
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecurityOne">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecurityOne"
-                      aria-expanded="true"
-                      aria-controls="collapsesecurityOne"
-                    >
-                      What is Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecurityOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingsecurityOne"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecurityTwo">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecurityTwo"
-                      aria-expanded="false"
-                      aria-controls="collapsesecurityTwo"
-                    >
-                      What are the benefits of security via Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecurityTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingsecurityTwo"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecurityThree">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecurityThree"
-                      aria-expanded="false"
-                      aria-controls="collapsesecurityThree"
-                    >
-                      What makes Revest different?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecurityThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingsecurityThree"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecurityFour">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecurityFour"
-                      aria-expanded="false"
-                      aria-controls="collapsesecurityFour"
-                    >
-                      What happens to my investments if Revest goes into
-                      bankruptcy?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecurityFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingsecurityFour"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecurityFive">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecurityFive"
-                      aria-expanded="false"
-                      aria-controls="collapsesecurityFive"
-                    >
-                      What regulations apply to Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecurityFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingsecurityFive"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingsecuritySix">
-                    <span class="icon_box">
-                      <img
-                        src="{{ asset('themes/front/assets/images/icons/message.png') }}"
-                        alt="security"
-                      />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsesecuritySix"
-                      aria-expanded="false"
-                      aria-controls="collapsesecuritySix"
-                    >
-                      How do I security security in Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsesecuritySix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingsecuritySix"
-                    data-bs-parent="#accordionExamplesecurity"
-                  >
-                    <div class="accordion-body">
-                      <p class="neutral-top neutral-bottom">
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__tab__content" id="taxes">
-            <div class="faq__group">
-              <div class="accordion" id="accordionExampletaxes">
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesOne">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesOne"
-                      aria-expanded="true"
-                      aria-controls="collapsetaxesOne"
-                    >
-                      What is Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingtaxesOne"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesTwo">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesTwo"
-                      aria-expanded="false"
-                      aria-controls="collapsetaxesTwo"
-                    >
-                      What are the benefits of taxes via Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingtaxesTwo"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesThree">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesThree"
-                      aria-expanded="false"
-                      aria-controls="collapsetaxesThree"
-                    >
-                      What makes Revest different?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingtaxesThree"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesFour">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesFour"
-                      aria-expanded="false"
-                      aria-controls="collapsetaxesFour"
-                    >
-                      What happens to my investments if Revest goes into
-                      bankruptcy?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingtaxesFour"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesFive">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesFive"
-                      aria-expanded="false"
-                      aria-controls="collapsetaxesFive"
-                    >
-                      What regulations apply to Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingtaxesFive"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p>
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item content__space">
-                  <h5 class="accordion-header" id="headingtaxesSix">
-                    <span class="icon_box">
-                      <img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="taxes" />
-                    </span>
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapsetaxesSix"
-                      aria-expanded="false"
-                      aria-controls="collapsetaxesSix"
-                    >
-                      How do I taxes taxes in Revest?
-                    </button>
-                  </h5>
-                  <div
-                    id="collapsetaxesSix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingtaxesSix"
-                    data-bs-parent="#accordionExampletaxes"
-                  >
-                    <div class="accordion-body">
-                      <p class="neutral-top neutral-bottom">
-                        combined with a handful of model sentence structures, to
-                        generate Lorem Ipsum which looks reasonable. The
-                        generated Lorem Ipsum is therefore always free from
-                        repetition, injected humour, or
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ==== #faq section end ==== -->
-{% endblock %}
+	<!-- ==== faq section start ==== -->
+	<section class="faq section__space">
+		<div class="container">
+			<div class="faq__area">
+				<div class="faq__tab__content" id="start">
+					<div class="faq__group">
+						<div class="accordion" id="accordionExampleStart">
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartOne">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartOne" aria-expanded="true" aria-controls="collapseStartOne">
+										QU'EST CE QUE SMART SOLIDARITY ?
+									</button>
+								</h5>
+								<div id="collapseStartOne" class="accordion-collapse collapse show" aria-labelledby="headingStartOne" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p>
+											Smart solidarity est une plate forme de financement participatif de "dons avec récompenses" basée sur l'entraide et la solidarité
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartTwo">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartTwo" aria-expanded="false" aria-controls="collapseStartTwo">
+										QUEL EST L'OBJECTIF VISÉ PAR SMART SOLIDARITY ?
+									</button>
+								</h5>
+								<div id="collapseStartTwo" class="accordion-collapse collapse" aria-labelledby="headingStartTwo" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p>
+											À la base nous sommes une association de partenaires ayant pour objectif de rassembler autour d'une plateforme entièrement décentralisée et securisée,une foule solidaire de personnes à travers le monde et leur permettre de s'auto-financer. Il s'agit du financement de la foule par la foule.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartThree">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartThree" aria-expanded="false" aria-controls="collapseStartThree">
+										QU'EST CE QUE LE FINANCEMENT PARTICIPATIF ?
+									</button>
+								</h5>
+								<div id="collapseStartThree" class="accordion-collapse collapse" aria-labelledby="headingStartThree" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p>
+											Il s'agit de la collecte de fonds fonctionnant sur une plateforme internet et permettant à un ensemble de contributeurs de choisir collectivement de financer directement et de manière traçable des projets.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartFour">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartFour" aria-expanded="false" aria-controls="collapseStartFour">
+										COMMENT ÇA FONCTIONNE?
+									</button>
+								</h5>
+								<div id="collapseStartFour" class="accordion-collapse collapse" aria-labelledby="headingStartFour" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p>
+											Smart solidarity est un système reposant sur 3 matrices lineaires ayant chacune 8 niveaux ou paliers  successifs avec des revenus croissants par niveau
+											<br>
+											a) Inscrivez-vous
+											<br>
+											b) Faites votre don unique de 10$,ainsi vous accédez au niveau 1 de la matrice 1 et devenez membre actif.
+											<br>
+											c) Commencez à recevoir vos revenus.
+											<br>
+											d) Évoluez simultanément sur les 3 matrices.
+											<br>
+											e) À la fin de la 3ème et dernière matrice le système vous débite 10$ et vouss repositionne automatiquement au niveau 1 de la matrice 1 pour un nouveau cycle.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartFive">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartFive" aria-expanded="false" aria-controls="collapseStartFive">
+										COMMENT GAGNE T-ON SUR SMART SOLIDARITY ?
+									</button>
+								</h5>
+								<div id="collapseStartFive" class="accordion-collapse collapse" aria-labelledby="headingStartFive" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p>
+											À chaque niveau de chaque matrice vous recevez 8 dons de personnes comme cela est indiqué sur le plan de rémunération.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingStartSix">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Start"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStartSix" aria-expanded="false" aria-controls="collapseStartSix">
+										APRÈS COMBIEN DE TEMPS VAIS-JE GAGNER ?
+									</button>
+								</h5>
+								<div id="collapseStartSix" class="accordion-collapse collapse" aria-labelledby="headingStartSix" data-bs-parent="#accordionExampleStart">
+									<div class="accordion-body">
+										<p class="neutral-top neutral-bottom">
+											Il n'y a pas un temps déterminé pour gagner, mais le booster vous garantit une évolution rapide au sein des 3 matrices mondiales et donc des gains assez rapide.
+										</p>
+									</div>
+								</div>
+							</div>
+              
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingFundSix">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund"/>
+									</span>
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundSix" aria-expanded="true" aria-controls="collapseFundSix">
+										QU'EST CE QUE LE BOOSTER ?
+									</button>
+								</h5>
+								<div id="collapseFundSix" class="accordion-collapse collapse" aria-labelledby="headingFundSix" data-bs-parent="#accordionExampleFund">
+									<div class="accordion-body">
+										<p>
+											Le booster assure l'évolution rapide des membres au sein des matrices.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingFundSeven">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundSeven" aria-expanded="false" aria-controls="collapseFundSeven">
+										COMMENT FONCTIONNE LE BOOSTER ?
+									</button>
+								</h5>
+								<div id="collapseFundSeven" class="accordion-collapse collapse" aria-labelledby="headingFundSeven" data-bs-parent="#accordionExampleFund">
+									<div class="accordion-body">
+										<p>
+											Au passage d'un niveau à un autre nous débitons à chaque membre une partie des gains qui est réinjecté automatiquement dans le système comme de nouveaux comptes afin de faire évoluer les anciens membres rapidement.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item content__space">
+								<h5 class="accordion-header" id="headingFundHeight">
+									<span class="icon_box">
+										<img src="{{ asset('themes/front/assets/images/icons/message.png') }}" alt="Fund"/>
+									</span>
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundHeight" aria-expanded="false" aria-controls="collapseFundHeight">
+										SUIS-JE OBLIGÉ DE PARRAINER ?
+									</button>
+								</h5>
+								<div id="collapseFundHeight" class="accordion-collapse collapse" aria-labelledby="headingFundHeight" data-bs-parent="#accordionExampleFund">
+									<div class="accordion-body">
+										<p>
+											Le parrainage n'est pas obligatoire mais vous pouvez gagner une commission de 30% sur le don de votre filleul c'est à dire vous gagnez 3$ par personne parrainée.
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ==== #faq section end ==== -->{% endblock %}

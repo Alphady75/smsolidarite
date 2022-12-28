@@ -1,0 +1,26 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Nouvelle demande{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="breadcrumb-dashboard">
+    <h5 class="h5">Compte</h5>
+    <div>
+        <a href="{{ path('user_demande_paiement_index') }}">Demandes de paiement</a>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <a href="{{ path('user_demande_paiement_new') }}">Nouvelle demande</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="account-info">
+    <h4 class="h5 py-3">Nouvelle demande</h4>
+
+    {{ include('user/user_demande_paiement/_form.html.twig') }}
+</div>
+
+{% endblock %}

@@ -2,19 +2,19 @@
 
 {% block title %}Mettre à jour mon profil{% endblock %}
 
-{% block pagetitle %}
-<div class="app-page-title">
-	<div class="page-title-wrapper">
-		<div class="page-title-heading">
-			<div class="page-title-icon">
-				<i class="metismenu-icon pe-7s-user"></i>
-			</div>
-			<div>
-				Compte {{ user.compte }}
-			</div>
-		</div>
-	</div>
+{% block breadcrumb %}
+
+<div class="breadcrumb-dashboard">
+    <h5 class="h5">Compte</h5>
+    <div>
+        <a href="{{ path('user_dashboard') }}">Accueil</a>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <a href="{{ path('user_compte') }}">Compte</a>
+		  <i class="fa-solid fa-arrow-right-long"></i>
+        <span>Mettre à jour mon profil</span>
+    </div>
 </div>
+
 {% endblock %}
 
 {% block body %}

@@ -1,0 +1,54 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Mes affiliers{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="breadcrumb-dashboard">
+    <h5 class="h5">Compte</h5>
+    <div>
+        <a href="{{ path('user_dashboard') }}">Accueil</a>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <a href="{{ path('user_demande_paiement_index') }}">Mes affiliers</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="account-info">
+            <div class="dashboard-single__box">
+                <div class="intro">
+                    <h5>Mes affiliers</h5>
+                </div>
+                {% for affilier in affiliers %}
+                <div class="last-income">
+                    <div class="group">
+                        <img src="{{ affilier.avatar ? vich_uploader_asset(affilier) : asset('img/user.jpg') | imagine_filter('small_avatar') }}" alt="Last Income" />
+                        <div>
+                            <h6>{{ affilier.nom }} {{ affilier.prenom }}</h6>
+                            <p class="secondary">{{ affilier.created|date('d/m/Y') }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <p>Aucun Affilier...</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="intro">
+            <div class="account-info">
+                <h5 class="h5 pb-3">Parrainage</h5>
+                <p class="py-2">Partager votre lien de parrainge pour inviter d'autres utilisateur à integrer <strong>{{ appName }}</strong>, et gagner 5% de leur investissemesnt</p>
+                <a href="{{ path('app_parrainage', {user_id: app.user.id}) }}" target="_blank" class="text-muted">{{ parrainageLink }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

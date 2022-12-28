@@ -1,0 +1,65 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Demandes de paiement{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="breadcrumb-dashboard">
+    <h5 class="h5">Compte</h5>
+    <div>
+        <a href="{{ path('user_dashboard') }}">Accueil</a>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <a href="{{ path('user_demande_paiement_index') }}">Demandes de paiement</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="compte-info">
+    <div class="investment-table investment-table-two">
+        <div class="intro">
+            <h5>Demandes de paiement
+
+            </h5>
+            <a href="{{ path('user_demande_paiement_new') }}" class="button button--effect button--last">Nouvelle
+                demande</a>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>#ID</th>
+                    <th>MONTANT</th>
+                    <th>TYPE VIREMENT</th>
+                    <th>DATE</th>
+                    <th>STATUT</th>
+                    <th></th>
+                </tr>
+                {% for demande_paiement in demande_paiements %}
+                <tr>
+                    <td>{{ demande_paiement.id }}</td>
+                    <td>{{ demande_paiement.montant|number_format(2, '', ' ') ~ currency }}</td>
+                    <td>{{ demande_paiement.typeVirement }}</td>
+                    <td>{{ demande_paiement.created ? demande_paiement.created|date('d/m/Y H:i:s') : '' }}</td>
+                    <td>
+                        <span class="badge bg-{{ demande_paiement.statut ? 'success' : 'warning' }}">{{
+                            demande_paiement.statut ? 'Confirmer' : 'En cours' }}</span>
+                    </td>
+                    <td>
+                        <a href="{{ path('user_demande_paiement_show', {'id': demande_paiement.id}) }}"
+                            class="button button--effect alt">Details</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="6">Aucune demande</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
